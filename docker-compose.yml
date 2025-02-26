@@ -64,7 +64,7 @@ services:
     container_name: payments-ms
     build: ./payments-ms
     ports:
-      - "3003:3003"
+      - "${PAYMENTS_MS_PORT}:${PAYMENTS_MS_PORT}"
     volumes:
       - ./payments-ms/src:/usr/src/app/src
     command: npm run start:dev

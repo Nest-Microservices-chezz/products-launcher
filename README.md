@@ -1,7 +1,7 @@
 ## Dev
 
 1. Clonar el repositorio
-2. creat archivo `.env` basado en el `.nev.template`
+2. creat archivo `.env` basado en el `.env.template`
 3. Ejetutar para tener codigo de los submodulos
 ```
 git submodule update --init --recursive

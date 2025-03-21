@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: auth-ms-prod
-  name: auth-ms-prod
+    app: auth-ms-v3
+  name: auth-ms-v3
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: auth-ms-prod
+      app: auth-ms-v3
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: auth-ms-prod
+        app: auth-ms-v3
     spec:
       containers:
       - image: southamerica-east1-docker.pkg.dev/microservices-nestjs-453917/nestmicroservicesdevtalles/auth-ms-prod
@@ -28,12 +28,12 @@ spec:
         - name: DATABASE_URL
           valueFrom:
             secretKeyRef:
-              name: auth-secrets-v2
+              name: auth-ms-secrets-v3
               key: DATABASE_URL
         - name: JWT_SECRET
           valueFrom:
             secretKeyRef:
-              name: auth-secrets-v2
+              name: auth-ms-secrets-v3
               key: JWT_SECRET
         resources: {}
 status: {}
